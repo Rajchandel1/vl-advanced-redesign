@@ -1,10 +1,12 @@
 body {
-  font-family: sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f0f0f0;
   color: #333;
   transition: background-color 0.3s, color 0.3s;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "ss01", "ss02", "cv01", "cv02", "cv03";
 }
 
 body.dark-mode {
@@ -33,7 +35,7 @@ a {
   padding: 32px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   text-align: center;
-  margin-top: 10vh;
+  margin-top: 4vh;
 }
 
 .hero .tag {
