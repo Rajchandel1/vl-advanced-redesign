@@ -3,93 +3,48 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Algorithm Visualization - Bubble Sort</title>
+  <title>Algorithm Visualization</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="navbar.css">
-  <link rel="importmap" href="import-map.json">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="hero.css">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 
 <body>
-  <nav class="navbar">
-    <div class="navbar-container">
-      <a href="/" class="navbar-brand">
-        <div class="brand-icon"><img src="https://rajchandel1.github.io/virtual-lab-redesign/images/virtuallab%20logo.png" alt="" height="100px"></div>
-      </a>
 
-      <button class="menu-toggle">☰</button>
-
-      <div class="navbar-links">
-        <button class="theme-toggle" id="theme-toggle">
-          <svg id="theme-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
-              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-          </svg>
-      </button>
-      
-        </button>
-     
-      </div>
-
-      <div class="mobile-menu">
-        <button class="theme-toggle mobile-theme-toggle">
-          <svg id="theme-icon-mobile" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-            stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-          </svg>
-          <span>Theme</span>
-        </button>
-        <a href="#report" class="report-bug mobile-report-bug">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-            stroke-linejoin="round">
-            <circle cx="12" cy="12" r="10" />
-            <line x1="8" y1="8" x2="16" y2="16" />
-            <line x1="8" y1="16" x2="16" y2="8" />
-          </svg>
-          <span>Report Bug</span>
+  <header class="navbar">
+    <div class="container">
+      <div class="navbar-brand">
+        <a href="/" class="brand-link">
+          <div><img src="https://rajchandel1.github.io/virtual-lab-redesign/images/virtuallab%20logo.png" alt="" height="100px"></div>
         </a>
       </div>
+      <div class="navbar-actions">
+        <button id="theme-toggle" class="theme-toggle-button" aria-label="Toggle theme">
+          
+        </button>
+      </div>
     </div>
-  </nav>
-
-  <!-- Bug Report Button (!Fixed) -->
-  <a href="#report" class="report-bug-button">Report a Bug</a>
-
-  <!-- Bug Report Form Overlay -->
-  <div class="bug-report-form-overlay">
-    <div class="bug-report-form">
-      <h2>Report a Bug</h2>
-      <p>Found an issue with the virtual lab? Please describe the bug in detail to help us fix it.</p>
-      <label for="bug-description">Bug Description</label>
-      <textarea id="bug-description" placeholder="Please describe what happened and what you expected to happen..."></textarea>
-      <button type="submit">Submit Report</button>
-    </div>
-  </div>
+  </header>
 
   <section class="hero">
-    <div class="hero-container">
-      <span class="tag">Algorithm Visualization</span>
-      <h1>Bubble Sort</h1>
-      <p class="description">An interactive exploration of the Bubble Sort algorithm: understanding its implementation,
-        complexity analysis, and practical applications.</p>
-      <div class="details">
-        <div class="detail-item">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-            stroke-linejoin="round">
-            <circle cx="12" cy="12" r="10" />
-            <polyline points="12 6 12 12 16 14" />
-          </svg>
-          <span>Duration: 45 mins</span>
+    <div class="container">
+      <div class="hero-content">
+        <span class="hero-badge">Algorithm Visualization</span>
+        <h1 class="hero-title">Bubble Sort</h1>
+        <p class="hero-description">An interactive exploration of the Bubble Sort algorithm: understanding its implementation, complexity analysis, and practical applications.</p>
+        <div class="hero-info">
+          <div class="hero-info-item">
+            <span class="material-symbols-outlined">schedule</span>
+            <span>Duration: 45 mins</span>
+          </div>
+          <div class="hero-info-item">
+            <span class="material-symbols-outlined">star</span>
+            <span>Difficulty: Beginner</span>
+          </div>
         </div>
-        <div class="detail-item">
-          <svg viewBox="0 0 24 24" fill="currentColor" stroke="none" stroke-width="2" stroke-linecap="round"
-            stroke-linejoin="round">
-            <polygon
-              points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-          </svg>
-          <span>Difficulty: Beginner</span>
-        </div>
+       
       </div>
-    
     </div>
   </section>
 
@@ -110,9 +65,9 @@
     </div>
   </section>
 
-  <section class="lab-content">
+  <section class="lab-content-section">
     <div class="lab-content-container">
-      <div class="tab-content" id="aim-content">
+      <div class="tab-content active" id="aim-content">
         <h2>Aim</h2>
         <p>The aim of this lab is to visualize and understand the Bubble Sort algorithm.</p>
       </div>
@@ -131,13 +86,11 @@
       <div class="tab-content" id="pretest-content">
         <h2>Pretest</h2>
         <p>Test your existing knowledge about sorting algorithms.</p>
-        <!-- Add pretest questions here -->
       </div>
 
       <div class="tab-content" id="bubble-sort-content">
         <h2>Bubble Sort Visualization</h2>
         <p>Here's a visualization of the Bubble Sort algorithm in action:</p>
-        <!-- Add interactive Bubble Sort visualization here -->
       </div>
 
       <div class="tab-content" id="optimized-bubble-sort-content">
@@ -148,25 +101,7 @@
       <div class="tab-content" id="code-content">
         <h2>Code Examples</h2>
         <p>Here are code examples of the Bubble Sort algorithm in various programming languages:</p>
-        <pre>
-          <code>
-            // JavaScript Bubble Sort
-            function bubbleSort(arr) {
-              let len = arr.length;
-              for (let i = 0; i < len; i++) {
-                for (let j = 0; j < len - i - 1; j++) {
-                  if (arr[j] > arr[j + 1]) {
-                    // Swap elements
-                    let temp = arr[j];
-                    arr[j] = arr[j + 1];
-                    arr[j + 1] = temp;
-                  }
-                }
-              }
-              return arr;
-            }
-          </code>
-        </pre>
+        
       </div>
 
       <div class="tab-content" id="assessment-content">
@@ -195,129 +130,70 @@
     </div>
   </section>
 
-  <section class="further-learning-section">
-    <div class="further-learning-container">
-      <h2>Further Learning Materials</h2>
-      <div class="carousel-container">
-        <button class="carousel-button prev" aria-label="Previous slide">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-            stroke-linejoin="round">
-            <polyline points="15 18 9 12 15 6" />
-          </svg>
-        </button>
-        <div class="carousel">
-          <div class="carousel-track">
-            <div class="resource-card">
-              <div class="resource-type article">
-                <span>📄</span> Article
-              </div>
-              <h3>Introduction to Sorting Algorithms</h3>
-              <p>A comprehensive guide to various sorting algorithms and their implementations in different programming
-                languages.</p>
-              <a href="https://example.com/sorting-algorithms" target="_blank">Learn more
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round">
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                  <polyline points="15 3 21 3 21 9"></polyline>
-                  <line x1="10" y1="14" x2="21" y2="3"></line>
-                </svg>
-              </a>
-            </div>
-            <div class="resource-card">
-              <div class="resource-type tutorial">
-                <span>👨‍🏫</span> Tutorial
-              </div>
-              <h3>Bubble Sort Visualization</h3>
-              <p>An interactive visualization of the Bubble Sort algorithm with step-by-step explanation and code
-                examples.</p>
-              <a href="https://example.com/bubble-sort-visualization" target="_blank">Learn more
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round">
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                  <polyline points="15 3 21 3 21 9"></polyline>
-                  <line x1="10" y1="14" x2="21" y2="3"></line>
-                </svg>
-              </a>
-            </div>
-            <div class="resource-card">
-              <div class="resource-type book">
-                <span>📚</span> Book
-              </div>
-              <h3>Mastering Algorithms with C</h3>
-              <p>A comprehensive book on algorithm design and analysis, including detailed explanations of sorting
-                algorithms.</p>
-              <a href="https://example.com/mastering-algorithms" target="_blank">Learn more
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round">
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                  <polyline points="15 3 21 3 21 9"></polyline>
-                  <line x1="10" y1="14" x2="21" y2="3"></line>
-                </svg>
-              </a>
-            </div>
-            <div class="resource-card">
-              <div class="resource-type video">
-                <span>🎬</span> Video
-              </div>
-              <h3>Optimizing Bubble Sort for Performance</h3>
-              <p>Learn advanced techniques to optimize Bubble Sort and improve its efficiency for specific use cases.</p>
-              <a href="https://example.com/optimizing-bubble-sort" target="_blank">Learn more
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round">
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                  <polyline points="15 3 21 3 21 9"></polyline>
-                  <line x1="10" y1="14" x2="21" y2="3"></line>
-                </svg>
-              </a>
-            </div>
-            <div class="resource-card">
-              <div class="resource-type article">
-                <span>📄</span> Article
-              </div>
-              <h3>Comparative Analysis of Sorting Algorithms</h3>
-              <p>A detailed comparison of different sorting algorithms based on time complexity, space complexity, and
-                stability.</p>
-              <a href="https://example.com/sorting-algorithms-comparison" target="_blank">Learn more
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round">
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                  <polyline points="15 3 21 3 21 9"></polyline>
-                  <line x1="10" y1="14" x2="21" y2="3"></line>
-                </svg>
-              </a>
-            </div>
-            <div class="resource-card">
-              <div class="resource-type book">
-                <span>📚</span> Book
-              </div>
-              <h3>Data Structures and Algorithms: A Visual Approach</h3>
-              <p>A visual guide to understanding data structures and algorithms, with animated examples and code
-                implementations.</p>
-              <a href="https://example.com/visual-algorithms" target="_blank">Learn more
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round">
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                  <polyline points="15 3 21 3 21 9"></polyline>
-                  <line x1="10" y1="14" x2="21" y2="3"></line>
-                </svg>
-              </a>
-            </div>
+  <section class="resource-section">
+    <div class="resource-container">
+      <h2>Further Resources</h2>
+      <div class="resource-cards">
+        <div class="resource-card">
+          <div class="resource-type article">
+            <span>📄</span> Article
           </div>
+          <h3>Introduction to Sorting Algorithms</h3>
+          <p>A comprehensive guide to various sorting algorithms and their implementations in different programming
+            languages.</p>
+          <a href="https://example.com/sorting-algorithms" target="_blank">Learn more
+            <span class="material-symbols-outlined">arrow_outward</span></a>
         </div>
-        <button class="carousel-button next" aria-label="Next slide">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-            stroke-linejoin="round">
-            <polyline points="9 18 15 12 9 6" />
-          </svg>
-        </button>
-      </div>
-      <div class="carousel-dots">
-        <button class="dot active" aria-label="Go to slide 1"></button>
-        <button class="dot" aria-label="Go to slide 2"></button>
-        <button class="dot" aria-label="Go to slide 3"></button>
-        <button class="dot" aria-label="Go to slide 4"></button>
-        <button class="dot" aria-label="Go to slide 5"></button>
-        <button class="dot" aria-label="Go to slide 6"></button>
+
+        <div class="resource-card">
+          <div class="resource-type video">
+            <span>▶️</span> Video
+          </div>
+          <h3>Bubble Sort Visualization</h3>
+          <p>Watch Bubble Sort in action with this step-by-step visualization.</p>
+          <a href="https://example.com/bubble-sort-video" target="_blank">Watch now
+            <span class="material-symbols-outlined">arrow_outward</span></a>
+        </div>
+
+        <div class="resource-card">
+          <div class="resource-type tutorial">
+            <span>🧑‍🏫</span> Tutorial
+          </div>
+          <h3>Interactive Bubble Sort Tutorial</h3>
+          <p>A hands-on tutorial to master the Bubble Sort algorithm.</p>
+          <a href="https://example.com/bubble-sort-tutorial" target="_blank">Start tutorial
+            <span class="material-symbols-outlined">arrow_outward</span></a>
+        </div>
+
+        <div class="resource-card">
+          <div class="resource-type article">
+            <span>📄</span> Article
+          </div>
+          <h3>Advanced Sorting Techniques</h3>
+          <p>Explore more advanced sorting algorithms beyond Bubble Sort.</p>
+          <a href="https://example.com/advanced-sorting" target="_blank">Explore
+            <span class="material-symbols-outlined">arrow_outward</span></a>
+        </div>
+
+        <div class="resource-card">
+          <div class="resource-type video">
+            <span>▶️</span> Video
+          </div>
+          <h3>Optimized Bubble Sort Explained</h3>
+          <p>Understand the optimizations and improvements in Bubble Sort.</p>
+          <a href="https://example.com/optimized-bubble-sort-video" target="_blank">Watch
+            <span class="material-symbols-outlined">arrow_outward</span></a>
+        </div>
+
+        <div class="resource-card">
+          <div class="resource-type tutorial">
+            <span>🧑‍🏫</span> Tutorial
+          </div>
+          <h3>Sorting Algorithm Comparison</h3>
+          <p>Compare different sorting algorithms in terms of performance and complexity.</p>
+          <a href="https://example.com/sorting-comparison" target="_blank">Compare
+            <span class="material-symbols-outlined">arrow_outward</span></a>
+        </div>
       </div>
     </div>
   </section>
@@ -344,7 +220,7 @@
 
         <div class="comment">
           <div class="comment-header">
-            <img src="https://via.placeholder.com/40" alt="User Avatar" class="user-avatar">
+            <img src="https://cdn-icons-png.flaticon.com/512/12225/12225935.png" alt="User Avatar" class="user-avatar">
             <div class="user-info">
               <span class="username">User123</span>
               <span class="timestamp">2 hours ago</span>
@@ -361,7 +237,7 @@
           <div class="replies">
             <div class="comment reply">
               <div class="comment-header">
-                <img src="https://via.placeholder.com/40" alt="User Avatar" class="user-avatar">
+                <img src="https://cdn-icons-png.flaticon.com/512/12225/12225935.png" alt="User Avatar" class="user-avatar">
                 <div class="user-info">
                   <span class="username">Dr. Smith</span>
                   <span class="timestamp">1 hour ago</span>
@@ -423,15 +299,16 @@
 
         <div class="contact-info">
           <h4>Contact Info</h4>
-          <p>011-26582050</p>
-          <p><a href="/cdn-cgi/l/email-protection#267d434b474f4a065654495243455243427b">[email protected]</a></p>
+          <p>123-456-7890</p>
+          <p><a href="/cdn-cgi/l/email-protection#267d434b474f4a065654495243455243427b">virtuallabs@gmail.com</a></p>
         </div>
       </div>
 
       <p class="license">Licensed under AGPL 3.0 and Creative Commons (CC BY-NC-SA 4.0)</p>
     </div>
   </footer>
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="script.js" type="module"></script>
+
+  <script src="script.js"></script>
 </body>
 
 </html>
